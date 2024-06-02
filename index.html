@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-a-Sketch</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="grid-container"></div>
+  <div class="choice">
+  <h1>Choose your grid</h1>
+  
+  <button class="button-main" onclick="popupFn()">
+      Click here
+  </button>
+</div>
+  <div id="overlay"></div>
+  <div id="popupDialog">
+      <p>
+        Choose the size of your grid (max:100): <input type="number" id="grid-size"/>
+      </p>
+      </p>
+      <div class="buttons">
+      <button id="generate-grid">Generate Grid</button>
+      <button onclick="closeFn()">
+          Close
+      </button>
+    </div>
+  </div>
+</div>
+  <script src="index.js"></script>
+</body>
+</html>
+<p>
+  

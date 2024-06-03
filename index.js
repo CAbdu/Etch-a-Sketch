@@ -12,6 +12,7 @@ button.addEventListener('click', () => {
   }
 });
 
+
 function createGrid(rows, cols) {
   // Clear any existing grid items
   container.innerHTML = '';
@@ -29,11 +30,25 @@ function createGrid(rows, cols) {
     div.style.width = `${gridSize}px`;
     div.style.height = `${gridSize}px`;
 
-    // Add event listener for mouseover event to change color
+    function random_bg_color() {
+      var x = Math.floor(Math.random() * 256);
+      var y = Math.floor(Math.random() * 256);
+      var z = Math.floor(Math.random() * 256);
+      var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+    console.log(bgColor);
+    document.body.style.background = bgColor;
+  
+      // Add event listener for mouseover event to change color
     div.addEventListener('mouseover', () => {
-      div.style.backgroundColor = 'blue'; // Change to desired color
+      div.style.backgroundColor = bgColor; // Change to desired color
     });
 
+      }
+    
+    random_bg_color();
+    
+   
     container.appendChild(div);
   }
 }
